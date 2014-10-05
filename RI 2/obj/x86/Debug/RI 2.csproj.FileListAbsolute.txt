@@ -1,0 +1,15 @@
+C:\Documents and Settings\Usuario\Meus documentos\RI 2\RI 2\bin\Debug\RI 2.exe
+C:\Documents and Settings\Usuario\Meus documentos\RI 2\RI 2\bin\Debug\RI 2.pdb
+C:\Documents and Settings\Usuario\Meus documentos\RI 2\RI 2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Usuario\Meus documentos\RI 2\RI 2\obj\x86\Debug\RI 2.exe
+C:\Documents and Settings\Usuario\Meus documentos\RI 2\RI 2\obj\x86\Debug\RI 2.pdb
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\obj\x86\Debug\RI 2.exe
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\obj\x86\Debug\RI 2.pdb
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\bin\Debug\RI 2.exe
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\bin\Debug\RI 2.pdb
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Thais\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\obj\x86\Debug\RI 2.exe
+C:\Users\Thais\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\obj\x86\Debug\RI 2.pdb
+C:\Users\Thais\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\bin\Debug\RI 2.exe
+C:\Users\Thais\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\bin\Debug\RI 2.pdb
+C:\Users\Thais\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\obj\x86\Debug\RI 2.csprojResolveAssemblyReference.cache
