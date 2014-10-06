@@ -1,0 +1,105 @@
+463045 - thais_maria_pinto
+
+Dada a base de documentos formada pelos arquivos:
+	1.txt, 2.txt, 3.txt, 4.txt, 5.txt e 6.txt
+
+Aplicar apenas a transformação léxica de texto para eliminar a pontuação, transformar para maiúsculas ou minúsculas os caracteres e obter o vocabulário.
+
+Utilizar um programa de computador que obtenha o vocabulário em ordem alfabética.
+
+OBSERVAÇÃO 1: O trabalho DEVE SER entregue na forma ELETRÔNICA, via SGA, na forma de um arquivo texto (extensão .TXT), SEM COMPACTAÇÃO, conforme o leiaute exigido no trabalho.
+
+OBSERVAÇÃO 2: Não serão considerados trabalhos fora das especificações exigidas.
+
+OBSERVAÇÃO 3: Muita atenção ao leiaute do arquivo .TXT (SEM COMPACTAÇÃO). A correção será automática.
+
+OBSERVAÇÃO 4: NÃO DEIXE PARA SUBMETER (ENVIAR) O ARQUIVO .TXT NA ÚLTIMA HORA. PLANEJE-SE PARA EVITAR EVENTUAIS PROBLEMAS.
+
+----------------------------------------------------------------
+TRABALHO 1:
+----------------------------------------------------------------
+Obter o arquivo invertido obtendo um índice com granularidade moderada.
+Deve ser entregue até as 23:30 horas do dia 15/09/2014, via SGA, um arquivo texto .TXT, NÃO COMPACTADO, seguindo o formato:
+
+               amar        (2:3,5)
+               amor        (1:4)
+               . . .        . . .
+               . . .        . . .
+               . . .        . . .
+               sobre       (1:2)
+               zebra       (5:1,2,3,4,5)
+
+----------------------------------------------------------------
+TRABALHO 2:
+----------------------------------------------------------------
+Obter o arquivo invertido obtendo um índice com granularidade fina (por palavra).
+Deve ser entregue até as 23:30 horas do dia 22/09/2014, via SGA, um arquivo texto .TXT, NÃO COMPACTADO, seguindo o formato:
+
+                amar        (2:(3:15),(5:3))
+                amor        (1:(4:2))
+                . . .        . . .
+                . . .        . . .
+                . . .        . . .
+                sobre       (1:(2:10))
+                zebra       (5:(1:3,7),(2:3),(3:3),(4:3),(5:2))
+
+----------------------------------------------------------------
+TRABALHO 3:
+----------------------------------------------------------------
+Obter a transposta da matriz da frequência de um índice com granularidade moderada.
+Deve ser entregue até as 23:30 horas do dia 29/09/2014, via SGA, um arquivo texto .TXT, NÃO COMPACTADO, seguindo o formato:
+
+                amar        0  0  1  0  1
+                amor        0  0  0  1  0
+                . . .          . . .
+                . . .          . . .
+                . . .          . . .
+                sobre       0  1  0  0  0
+                zebra       2  1  2  1  0
+
+----------------------------------------------------------------
+TRABALHO 4:
+----------------------------------------------------------------
+A partir de uma representação do arquivo invertido por intermédio de listas encadeadas (linked lists), para um índice com granularidade moderada, aplicar o melhor caso da utilização de blocos de memória.
+Calcular o ganho (EM PORCENTAGEM) para cada palavra do vocabulário para o melhor caso da utilização de blocos de memória.
+Apresentar o ganho total (EM PORCENTAGEM) obtido para o melhor caso da utilização de blocos de memória.
+O resultado deve ser apresentado EM PORCENTAGEM, arredondado, com duas e somente duas casas decimais.
+Deve ser entregue até as 23:30 horas do dia 06/10/2014, via SGA, um arquivo texto .TXT, NÃO COMPACTADO, seguindo o formato:
+
+                amar           19.20
+                amor            5.00
+                . . .          . . .
+                . . .          . . .
+                . . .          . . .
+                sobre          23.95
+                zebra           3.45
+                GANHO TOTAL    65.73
+
+----------------------------------------------------------------
+TRABALHO 5:
+----------------------------------------------------------------
+Obter o arquivo invertido obtendo um índice com granularidade fina (por byte, o 1o. byte da palavra).
+Deve ser entregue até as 23:30 horas do dia 13/10/2014, via SGA, um arquivo texto .TXT, NÃO COMPACTADO, seguindo o formato:
+
+   amar        (2:(3:5),(5:10))
+   amor        (1:(4:2))
+   . . .        . . .
+   . . .        . . .
+   . . .        . . .
+   sobre       (1:(2:0))
+   zebra       (5:(1:1,5),(2:33),(3:13),(4:6),(5:0))
+
+----------------------------------------------------------------
+TRABALHO 6:
+----------------------------------------------------------------
+Obter as runs (séries) ordenada para cada um dos arquivos e a run (série) final por intermédio da inversão baseada em ordenação (sort-based). Posteriormente obtêm-se um índice com granularidade moderada.
+Deve ser entregue até as 23:30 horas do dia 20/10/2014, via SGA, um arquivo texto .TXT, NÃO COMPACTADO, seguindo o formato:
+
+   <amar,1,3><amor,1,4><blusa,1,4> . . . <sol,1,1><solar,1,1>
+   <asa,2,4><azar,2,3><cactus,2,5> . . . <sol,2,1><solar,2,1>
+                . . .          . . .
+                . . .          . . .
+                . . .          . . .
+   <amar,6,2><bilhar,6,1><casa,6,5> . . . <mesa,6,3><sofá,6,1>
+
+   <amar,1,3><amar,6,2><amor,1,4><asa,2,4><azar,2,3><bilhar,6,1><blusa,1,4><cactus,2,5><casa,6,5><mesa,6,3><sofá,6,1><sol,1,1><sol,2,1><solar,1,1><solar,2,1>
