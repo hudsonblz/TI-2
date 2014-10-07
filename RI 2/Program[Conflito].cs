@@ -14,9 +14,9 @@ namespace RI_2
             Console.WriteLine("Começou!");
             info.contaDocumentos();
             Dicionario D = new Dicionario();
-            //D.Controle("Vetorial");       //5
+            D.Controle("Vetorial");       //5
             //D.Controle("GranModerada");   //5
-            D.Controle("GranFina");
+            //D.Controle("GranFina");
             TimeSpan Time = DateTime.Now - Antes;
             Console.WriteLine("\nTempo gasto = "+Time.Seconds.ToString());
             Console.ReadKey();

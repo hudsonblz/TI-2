@@ -21,7 +21,7 @@ namespace RI_2
         /// </summary>
         /// <param name="_numArquivo">Nome do arquivo txt, representado por um número</param>
         /// <param name="Voc">referencia à lista 'vocabulario' da qual esse documento vai pertencer</param>
-        public Documento(int _numArquivo, ref List<Termo> Voc)
+        public Documento(int _numArquivo, ref List<Termo> Voc, bool granularidadeFina)
         {
             /* No construtor basta dizer o nome (numero) do arquivo txt
              * O documento é lido, ordenado e adicionado ao vocabulário */
@@ -53,7 +53,7 @@ namespace RI_2
             texto = texto.Replace("\r\n", " ");
 
             /** Troca os caracteres acentuados por não acentuados **/
-            string[] caracteresEspeciais = { "»", "«", ".", ",", ":", " - ", "(", ")", "ª", "°", "!", "&", "*", "_", ";", "=", "?", "<", ">", "[", "]", "\"", "'" };
+            string[] caracteresEspeciais = { "»","«", ".", ",", "-", ":", "(", ")", "ª", "°", "!", "&", "*", "_", ";", "=", "?", "<", ">", "[", "]", "\"", "'" };
             for (int i = 0; i < caracteresEspeciais.Length; i++)
             {
                 texto = texto.Replace(caracteresEspeciais[i], "");
@@ -184,16 +184,15 @@ namespace RI_2
         }
 
         /// <summary>
-        /// Retorna string com cada posição no vetor de pesos com 3 casas decimais
+        /// Imprime na tela cada posição no vetor de pesos com 3 casas decimais
         /// </summary>
-        public string stringPesosSmart()
+        public void imprimePesosNaTela()
         {
-            string texto = "";
             foreach (double d in Pesos)
             {
-                texto += String.Format("{0:0.000} ", d);
+                Console.Write("{0:.000} ", d);
             }
-            return texto;
+            Console.WriteLine("");
         }
 
         /// <summary>
