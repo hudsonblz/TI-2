@@ -8,7 +8,7 @@ namespace RI_2
 {
     partial class info
     {
-        static public int numDocumentos = 6;
+        static public int numDocumentos = 0;
         static public void contaDocumentos()
         {
             int i = 1;
