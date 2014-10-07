@@ -13,3 +13,8 @@ C:\Users\Thais\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\obj\x86\Debug\RI 2.p
 C:\Users\Thais\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\bin\Debug\RI 2.exe
 C:\Users\Thais\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\bin\Debug\RI 2.pdb
 C:\Users\Thais\Google Drive\Geral PUC\sextoime\RI\RI 2\RI 2\obj\x86\Debug\RI 2.csprojResolveAssemblyReference.cache
+C:\Users\Thais\Google Drive\GitHub\TI-2\RI 2\obj\x86\Debug\RI 2.exe
+C:\Users\Thais\Google Drive\GitHub\TI-2\RI 2\obj\x86\Debug\RI 2.pdb
+C:\Users\Thais\Google Drive\GitHub\TI-2\RI 2\bin\Debug\RI 2.exe
+C:\Users\Thais\Google Drive\GitHub\TI-2\RI 2\bin\Debug\RI 2.pdb
+C:\Users\Thais\Google Drive\GitHub\TI-2\RI 2\obj\x86\Debug\RI 2.csprojResolveAssemblyReference.cache

@@ -42,4 +42,4 @@ tem	37.50
 um	33.33 
 uma	40.00 
 valor	25.00 
-GANHO TOTAL	28,22 
+GANHO TOTAL	28.22 

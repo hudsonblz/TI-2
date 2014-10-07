@@ -1,0 +1,33 @@
+Projeto: TI 2° semestre de 2014 - Recuperação da informação de "Os Lusiadas"
+
+Objetivo final: Desenvolver uma interface de consulta (recuperação de informação) com o texto de Os Lusiadas como base
+
+Nós temos que: 
+Projetar e implementar (codificar) interfaces para o modelo modelo vetorial de RI.
+> Representar os documentos por pesos [SMART]
+> Transformar a consulta em pesos [como faz isso?]
+> Calculo de similaridade (Doc, Consulta)
+> Ordenar os documentos pela similaridade
+> Apresentar links para os documentos 
+> Interface  gráfica
+
+Usar alguma técnica de compactação do vocabulário, dos vetores, etc. (huffman)
+> Logica em --> http://pt.slideshare.net/HelderCro/compresso-huffman (mais ou menos)
+> Exemplo de código em --> http://seedotnet.wordpress.com/2011/04/16/huffman-coding/
+
+Realizar  uma  análise  de  viabilidade  em  função  de  informações quantitativas
+> Memória gasta
+> Tamanho  da  base
+> Número  de  palavras
+> Tamanhos  médios
+> Tamanhos mínimos
+> Tamanhos máximos
+> Tempo para obter as visões lógicas
+> Tempo para extrair o vocabulário
+> Tempo para indexar
+> Tempo para realizar uma consultar no índice  compactado e  no  índice  não  compactado
+> Influencia do hardware nessas medidas
+>>  SEMPRE PENSAR NAS INFORMAÇÕES QUANTITATIVAS  que serão importantes para as conclusões finais no relatório (texto) do TI a ser apresentado. 
+
+Duvidas: É pra fazer a leitura a partir de txt's ou do site?
+

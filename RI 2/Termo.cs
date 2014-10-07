@@ -96,7 +96,7 @@ namespace RI_2
         /// <returns>melhorCaso;piorCaso;ganhoTermo</returns>
         public string dadosLinkedList(){
             string[] moderada = GranularidadeModerada().Split('(', ')', ':', ',');    
-            int melhorCaso = (moderada.Length-2) * 4;//moderada, no caso, seria o proprio indice a ser armazenado no hash, cada int gasta 4 bytes, então...
+            int melhorCaso = (moderada.Length-2) * 4; //moderada, no caso, é o proprio indice a ser armazenado no hash, cada int gasta 4 bytes, então...
             int piorCaso = (moderada.Length - 3) * 8; // Obtem cada par de doc,gran e multiplica o numero de pares por 12 = consumo de bytes do termo numa linked list
 
             double consumo = (1 - melhorCaso * 1.0 / piorCaso) * 100;
