@@ -100,7 +100,7 @@ namespace TI_2
             texto = texto.Replace("\r\n", " ");
 
             /** Troca os caracteres acentuados por não acentuados **/
-            string[] caracteresEspeciais = { "—", "’", ".", ",", ":", " - ", "(", ")", "ª", "°", "!", "&", "*", "_", ";", "=", "?", "<", ">", "[", "]", "\"", "'" };
+            string[] caracteresEspeciais = { "«", "»", "—", "’", ".", ",", ":", " - ", "(", ")", "ª", "°", "!", "&", "*", "_", ";", "=", "?", "<", ">", "[", "]", "\"", "'" };
             for (int i = 0; i < caracteresEspeciais.Length; i++)
             {
                 texto = texto.Replace(caracteresEspeciais[i], "");
