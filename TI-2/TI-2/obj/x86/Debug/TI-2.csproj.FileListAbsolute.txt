@@ -1,0 +1,8 @@
+C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\bin\Debug\TI-2.exe
+C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\bin\Debug\TI-2.pdb
+C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.csprojResolveAssemblyReference.cache
+C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Form1.resources
+C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Properties.Resources.resources
+C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.csproj.GenerateResource.Cache
+C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.exe
+C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.pdb

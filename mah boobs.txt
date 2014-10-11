@@ -9,9 +9,10 @@ Projetar e implementar (codificar) interfaces para o modelo modelo vetorial de R
 > Calculo de similaridade (Doc, Consulta)
 > Ordenar os documentos pela similaridade
 > Apresentar links para os documentos 
-> Interface  gráfica
+> Interface  gráfica -> thais
+>legal -> hudson
 
-Usar alguma técnica de compactação do vocabulário, dos vetores, etc. (huffman)
+Usar alguma técnica de compactação do vocabulário, dos vetores, etc. (huffman/elias) - Elias Basto
 > Logica em --> http://pt.slideshare.net/HelderCro/compresso-huffman (mais ou menos)
 > Exemplo de código em --> http://seedotnet.wordpress.com/2011/04/16/huffman-coding/
 
