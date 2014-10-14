@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.IO;
+﻿using System.IO;
 
 namespace TI_2
 {
     partial class info
     {
-        static public int numDocumentos = 6;
+        static public int numDocumentos = 0;
+        static public int totalPalavras = 0;
+        static public int palavrasVocab = 0;
+        static public int tempoLerArquivos = 0;
+
         static public void contaDocumentos()
         {
             int i = 1;
@@ -16,7 +16,7 @@ namespace TI_2
             {
                 i++;
             }
-            numDocumentos = i-1;
+            numDocumentos = i - 1;
         }
     }
 }

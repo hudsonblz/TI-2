@@ -1,41 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace TI_2
 {
-    class Dicionario
+    internal class Dicionario
     {
-        public Documento[] Docs = new Documento[info.numDocumentos + 1];
+        public Documento[] Docs;
         public List<Termo> Vocabulario = new List<Termo>();        // Todos os termos
         private Ordenar O = new Ordenar();
 
-        public void lerDocs()
+        public Dicionario()
         {
+            info.contaDocumentos();
+            Docs = new Documento[info.numDocumentos + 1];
+        }
+      
+        public void lerDocs(System.Windows.Forms.ProgressBar progressBar)
+        {
+            DateTime CalcTempo = DateTime.Now;
+            progressBar.Visible = true;
             for (int i = 1; i <= info.numDocumentos; i++)
             {
                 Docs[i] = new Documento(i, ref Vocabulario);
-            }
+                progressBar.PerformStep();
+            }            
             Ordenar();
-        }
-
-        private void Ordenar()
-        {
-            Termo[] AuxOrdenar = new Termo[Vocabulario.Count];
-            Vocabulario.CopyTo(AuxOrdenar);
-            O.Sort(ref AuxOrdenar, 0, AuxOrdenar.Length - 1);
-            Vocabulario.Clear();
-            Vocabulario.AddRange(AuxOrdenar);
-        }
-
-        private void rotinaModeloVetorial()
-        {
-            FreqInversa();
-            for (int i = 1; i <= info.numDocumentos; i++)
-            {
-                Docs[i].calculaPesos(Vocabulario);
-            }
+            info.palavrasVocab = Vocabulario.Count;
+            progressBar.PerformStep();
+            progressBar.Visible = false;
+            TimeSpan tempoGasto = DateTime.Now - CalcTempo;
+            info.tempoLerArquivos = (int)tempoGasto.TotalSeconds;
         }
 
         private void FreqInversa()
@@ -50,6 +44,24 @@ namespace TI_2
                         Cont++;
                 }
                 T.frequenciaInversa = Math.Log(1 + (info.numDocumentos * 1.0 / Cont), 2);
+            }
+        }
+
+        public void Ordenar()
+        {
+            Termo[] AuxOrdenar = new Termo[Vocabulario.Count];
+            Vocabulario.CopyTo(AuxOrdenar);
+            O.Sort(ref AuxOrdenar, 0, AuxOrdenar.Length - 1);
+            Vocabulario.Clear();
+            Vocabulario.AddRange(AuxOrdenar);
+        }
+
+        private void rotinaModeloVetorial()
+        {
+            FreqInversa();
+            for (int i = 1; i <= info.numDocumentos; i++)
+            {
+                Docs[i].calculaPesos(Vocabulario);
             }
         }
     }

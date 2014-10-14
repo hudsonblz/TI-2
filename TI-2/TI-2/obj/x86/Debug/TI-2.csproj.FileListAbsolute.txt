@@ -6,3 +6,4 @@ C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Properties.
 C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.csproj.GenerateResource.Cache
 C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.exe
 C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.pdb
+C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Estatisticas.resources
