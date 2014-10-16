@@ -8,3 +8,13 @@ C:\Documents and Settings\Usuario\Meus documentos\Google Drive\GitHub\TI-2\TI-2\
 C:\Documents and Settings\Usuario\Meus documentos\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.exe
 C:\Documents and Settings\Usuario\Meus documentos\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.pdb
 C:\Documents and Settings\Usuario\Meus documentos\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Estatisticas.resources
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\TI-2\TI-2\obj\x86\Debug\TI-2.exe
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\TI-2\TI-2\obj\x86\Debug\TI-2.pdb
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\TI-2\TI-2\bin\Debug\TI-2.exe
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\TI-2\TI-2\bin\Debug\TI-2.pdb
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\TI-2\TI-2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\TI-2\TI-2\obj\x86\Debug\TI_2.Estatisticas.resources
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\TI-2\TI-2\obj\x86\Debug\TI_2.Form1.resources
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\TI-2\TI-2\obj\x86\Debug\TI_2.Properties.Resources.resources
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\TI-2\TI-2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Usuario\Meus documentos\Google Drive\TI-2\TI-2\obj\x86\Debug\GenerateResource.write.1.tlog

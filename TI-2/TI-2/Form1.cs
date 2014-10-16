@@ -12,6 +12,7 @@ namespace TI_2
         public Form1()
         {
             InitializeComponent();
+            info.rotular();
         }
 
         private void gerarLinks()
@@ -38,6 +39,7 @@ namespace TI_2
         private void linkClicado(object caminhoLink, LinkLabelLinkClickedEventArgs e)
         {
             panel_Texto.Visible = true;
+            label_rotuloDoc.Text = info.rotulos[int.Parse(e.Link.LinkData.ToString())];
             label_TextoDoc.Text = getTextoDoc(int.Parse(e.Link.LinkData.ToString()));
         }
 
@@ -47,7 +49,7 @@ namespace TI_2
             link.Top = linkTop;
             linkTop += 45;
             link.Left = linkLeft;
-            link.Text = "Documento "+caminhoLink;
+            link.Text = info.rotulos[caminhoLink];
             link.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkClicado);
             LinkLabel.Link goTo = new LinkLabel.Link();
             goTo.LinkData = caminhoLink;

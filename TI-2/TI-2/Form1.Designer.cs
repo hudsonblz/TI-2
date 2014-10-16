@@ -38,6 +38,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.formarVocabularioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estatisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label_rotuloDoc = new System.Windows.Forms.Label();
             this.panel_Texto.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +79,7 @@
             // 
             // panel_Texto
             // 
+            this.panel_Texto.Controls.Add(this.label_rotuloDoc);
             this.panel_Texto.Controls.Add(this.label_TextoDoc);
             this.panel_Texto.Location = new System.Drawing.Point(343, 102);
             this.panel_Texto.Name = "panel_Texto";
@@ -87,7 +89,7 @@
             // label_TextoDoc
             // 
             this.label_TextoDoc.AutoSize = true;
-            this.label_TextoDoc.Location = new System.Drawing.Point(17, 21);
+            this.label_TextoDoc.Location = new System.Drawing.Point(12, 42);
             this.label_TextoDoc.Name = "label_TextoDoc";
             this.label_TextoDoc.Size = new System.Drawing.Size(182, 13);
             this.label_TextoDoc.TabIndex = 0;
@@ -117,16 +119,27 @@
             // formarVocabularioToolStripMenuItem
             // 
             this.formarVocabularioToolStripMenuItem.Name = "formarVocabularioToolStripMenuItem";
-            this.formarVocabularioToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
+            this.formarVocabularioToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
             this.formarVocabularioToolStripMenuItem.Text = "Formar Vocabulario";
             this.formarVocabularioToolStripMenuItem.Click += new System.EventHandler(this.formarVocabularioToolStripMenuItem_Click);
             // 
             // estatisticasToolStripMenuItem
             // 
             this.estatisticasToolStripMenuItem.Name = "estatisticasToolStripMenuItem";
-            this.estatisticasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.estatisticasToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.estatisticasToolStripMenuItem.Text = "Estatisticas";
             this.estatisticasToolStripMenuItem.Click += new System.EventHandler(this.estatisticasToolStripMenuItem_Click);
+            // 
+            // label_rotuloDoc
+            // 
+            this.label_rotuloDoc.AutoSize = true;
+            this.label_rotuloDoc.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_rotuloDoc.ForeColor = System.Drawing.Color.Blue;
+            this.label_rotuloDoc.Location = new System.Drawing.Point(13, 11);
+            this.label_rotuloDoc.Name = "label_rotuloDoc";
+            this.label_rotuloDoc.Size = new System.Drawing.Size(53, 21);
+            this.label_rotuloDoc.TabIndex = 1;
+            this.label_rotuloDoc.Text = "Título";
             // 
             // Form1
             // 
@@ -164,6 +177,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem formarVocabularioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estatisticasToolStripMenuItem;
+        private System.Windows.Forms.Label label_rotuloDoc;
     }
 }
 
