@@ -60,6 +60,7 @@ namespace TI_2
         private void formarVocabularioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Vocab.lerDocs(progressBar1);
+            button_Search.Enabled = true;
         }
 
         private void estatisticasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,6 +68,7 @@ namespace TI_2
             Estatisticas Estatic = new Estatisticas();
             Estatic.ShowDialog();
         }
+
 
     }
 }

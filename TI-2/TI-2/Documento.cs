@@ -10,21 +10,20 @@ namespace TI_2
         private string Arquivo;     // Nome do arquivo de texto de origem do documento
         private List<Termo> documento = new List<Termo>();      // Lista de termos do documento
         public int numArquivo;     // Representa a posição do arquivo a matriz de frequencia dos termos
-        private Ordenar O = new Ordenar();  // Usado para ordenar a lista 'documento'
 
         /// <summary>
-        /// Cria novo objeto tipo Documento, equivalente lógico a um arquivo txt.
-        /// O documento é lido, ordenado e adicionado ao vocabulário.
+        /// Cria novo objeto do tipo Documento, equivalente lógico a um arquivo txt.
+        /// O documento é lido, ordenado e os termos são adicionados ao vocabulário.
         /// </summary>
         /// <param name="_numArquivo">Nome do arquivo txt, representado por um número</param>
-        /// <param name="Voc">referencia à lista 'vocabulario' da qual esse documento vai pertencer</param>
+        /// <param name="Voc">referencia à lista 'vocabulario' à qual esse documento vai pertencer</param>
         public Documento(int _numArquivo, ref List<Termo> Voc)
         {
             /* No construtor basta dizer o nome (numero) do arquivo txt
              * O documento é lido, ordenado e adicionado ao vocabulário */
             numArquivo = _numArquivo;
             Arquivo = numArquivo + ".txt";
-            LerArquivo();
+            LerArquivo();   //Leitura, trasf. léxica, elimina palavras repetidas e ordena
 
             if (Voc.Count > 0)
                 addVocabulario(ref Voc); //Adiciona a lista de termos no documento ao vocabulario geral eliminando duplicidades
@@ -52,7 +51,7 @@ namespace TI_2
         }
 
         /// <summary>
-        /// Lê arquivo txt e adiciona as palavras na lista de documento sem duplicidade
+        /// Lê arquivo txt e adiciona as palavras na lista de documento, tratadas e sem duplicidade
         /// </summary>
         ///
         public void LerArquivo()
@@ -63,38 +62,48 @@ namespace TI_2
             info.totalPalavras += termos.Length;
             // Esse vetor "termos" contem todas as palavras do arquivo (duplicadas)
             addTermosNoDocumento(termos);     // Rotina para adicionar os termos lidos na lista do documento
-            Ord(); //Faz o ordenamento da lista
+            Ordenar(); //Faz o ordenamento da lista
         }
 
+        /// <summary>
+        /// Lê o documento inteiro e salva o conteudo no string texto            
+        /// </summary>
+        /// <returns>Texto original do documento</returns>
         public string LerArquivoInteiro()
         {
             string texto = File.ReadAllText(Arquivo);   // Lê o documento inteiro e salva o conteudo no string texto
             return texto;
         }
 
+        /// <summary>
+        /// Remoção de caracteres especiais, pontuação e stopwords
+        /// </summary>
+        /// <param name="texto">Texto não tratado lido do txt</param>
+        /// <returns>Texto tratado</returns>
         private static string transformacaoLexica(string texto)
         {
-            texto = texto.Replace("\r\n", " ");
-
-            /** Troca os caracteres acentuados por não acentuados **/
-            string[] caracteresEspeciais = { "«", "»", "—", "’", ".", ",", ":", " - ", "(", ")", "ª", "°", "!", "&", "*", "_", ";", "=", "?", "<", ">", "[", "]", "\"", "'" };
-            for (int i = 0; i < caracteresEspeciais.Length; i++)
+           /* Remove cacaracteres especiais e pontuações */
+            string[] charParaRemover = { "«", "»", "—", "’", ".", ",", ":", " - ", "(", ")", "!", "*", "_", ";", "=", "?", "<", ">", "[", "]", "\"", "'" };
+            for (int i = 0; i < charParaRemover.Length; i++)
             {
-                texto = texto.Replace(caracteresEspeciais[i], "");
+                texto = texto.Replace(charParaRemover[i], "");
             }
 
-            string[] outrosCaracteresEspeciais = { "^\\s+", "/", "\t", "\\s+$", "\\s+" };
+            /* Substitui caracteres de escape por espaços */
+            string[] outrosCaracteresEspeciais = { "\r\n", "^\\s+", "/", "\t", "\\s+$", "\\s+" };
             for (int i = 0; i < outrosCaracteresEspeciais.Length; i++)
             {
                 texto = texto.Replace(outrosCaracteresEspeciais[i], " ");
             }
 
+            /* Remove as stopwords que estão em um arquivo txt*/
             string[] stopwords = File.ReadAllText("stopwords.txt").Split(' ');
             for (int i = 0; i < stopwords.Length; i++)
             {
                 texto = texto.Replace(" " + stopwords[i] + " ", " ");
             }
-            texto = texto.ToLower();    // Transforma todo o texto em maiusculas
+
+            texto = texto.ToLower();    // Transforma todo o texto em minúsculas
             return texto;
         }
 
@@ -102,41 +111,41 @@ namespace TI_2
         /// Adiciona as palavras lidas no arquivo para a lista de termos do documento
         /// </summary>
         /// <param name="termos">Vetor de palavras lidas no arquivo</param>
-        /// <param name="granFina">Se a adição deve preparar para a execucao da rotina de granularidade fina</param>
         private void addTermosNoDocumento(string[] termos)
         {
-            bool existe = false;    // Variavel de controle para não colocar termos duplicados na lista
-            // e aumentar a frequencia do termo no documento caso já exista
+            /* Variavel de controle para não colocar termos duplicados na lista 
+             * e aumentar a frequencia do termo no documento caso já exista */
+            bool existe = false;
 
+            /* Para cada palavra do arquivo o algoritimo percorre toda a lista 'documento' vendo se ela ja existe
+             * Caso exista, o numero de frequencia daquele termo naquele documento é aumentado em 1
+             * e a variavel existe é setada como true, para que aquele termo não seja inserido*/
             for (int j = 0; j < termos.Length; j++)// Para cada palavra do arquivo
-            {   /* Para cada palavra do arquivo o algoritimo percorre toda a lista 'documento' vendo se ela ja existe
-                   Caso exista, o numero de frequencia daquele termo naquele documento é aumentado em 1
-                   e a posicao da palavra no vetor é inserida na matriz de posiçoes do termo
-                   e a variavel repete e setada como true, para que aquele termo não seja inserido*/
-                if (termos[j] != "")
+            {   
+                if (termos[j] != "")    //Se o termo for mesmo um termo, senão deixa pra lá
                 {
-                    if (documento.Count > 0)
+                    if (documento.Count > 0)    //Se a lista 'documento' tiver algum termo, senão adiciona direto
                     {
-                        for (int i = 0; i < documento.Count; i++)
+                        for (int i = 0; i < documento.Count; i++)   //Percorre a lista
                         {
-                            {  /*No caso de a palavra ja existir*/
-                                if (documento[i].palavra == termos[j]) // Eu não usei documento.contains() pq teria que comparar com um objeto tipo Termo, e eu quero comparar com um string
-                                {
-                                    documento[i].frequenciaEmDoc[numArquivo]++; //aqui eu aumento a frequencia daquele termo naquele documento na matriz do termo
-                                    existe = true;  // e digo que aquela palavra ja existe no vetor para não ser adicionada mais a frente
-                                }
+                            /*No caso de a palavra ja existir*/
+                            if (documento[i].palavra == termos[j]) // Eu não usei documento.Contains() pq teria que comparar com um objeto tipo Termo, e eu quero comparar com um string
+                            {
+                                documento[i].frequenciaEmDoc[numArquivo]++; //aqui eu aumento a frequencia daquele termo naquele documento na matriz do termo
+                                existe = true;  // e digo que aquela palavra ja existe no vetor para não ser adicionada mais a frente
                             }
+
                         }
                     }
                     else    // Se o documento estiver vazio simplesmente adicione o termo
                     {
-                        documento.Add(new Termo(termos[j], numArquivo, j + 1));
+                        documento.Add(new Termo(termos[j], numArquivo));
                         numPalavras++;
                         existe = true;
                     }
                     if (!existe)   // Se aquela palava não existir na lista do documento simplesmente adicione o termo
                     {
-                        documento.Add(new Termo(termos[j], numArquivo, j + 1));
+                        documento.Add(new Termo(termos[j], numArquivo));
                         numPalavras++;
                     }
                     existe = false; // Reseta o existe para o proximo loop
@@ -158,7 +167,8 @@ namespace TI_2
                 {
                     if (Voc[i].palavra == termo.palavra)
                     {
-                        //Aqui, caso a palavra exista no vocabulario, a frequencia naquele documento é igualada à frequencia observada na leitura do documento
+                        /* Caso a palavra exista no vocabulario 
+                         * a frequencia naquele documento é igualada à frequencia observada na leitura do documento */
                         Voc[i].frequenciaEmDoc[numArquivo] = termo.frequenciaEmDoc[numArquivo];
                         existe = true;
                     }
@@ -176,13 +186,10 @@ namespace TI_2
         /// <summary>
         /// Ordena usando o Quick Sort
         /// </summary>
-        private void Ord()
+        private void Ordenar()
         {
-            Termo[] Ordenar = new Termo[documento.Count];
-            documento.CopyTo(Ordenar);
-            O.Sort(ref Ordenar, 0, Ordenar.Length - 1);
-            documento.Clear();
-            documento.AddRange(Ordenar);
+            Ordenar O = new Ordenar();
+            O.Sort(ref documento, 0, documento.Count - 1);  // Usado para ordenar a lista 'documento'
         }
 
         /// <summary>
@@ -195,11 +202,11 @@ namespace TI_2
             int i = 0;
             foreach (Termo T in Voc) // Calcula o peso final para cada termo no vocabulario
             {
-                if (Pesos[i] != 0)
+                if (Pesos[i] != 0)  //Se não for 0, o vetor 'Pesos' conterá o valor da frequencia direta do termo
                 {
                     Pesos[i] = (1 + Pesos[i]) * T.frequenciaInversa;
                 }
-                i++;
+                i++;    //Acha que eu devia ter usado um for? Mas eu gosto do foreach! :P
             }
         }
     }

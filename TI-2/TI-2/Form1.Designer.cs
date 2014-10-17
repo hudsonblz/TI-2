@@ -33,12 +33,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_Search = new System.Windows.Forms.Button();
             this.panel_Texto = new System.Windows.Forms.Panel();
+            this.label_rotuloDoc = new System.Windows.Forms.Label();
             this.label_TextoDoc = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.formarVocabularioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estatisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label_rotuloDoc = new System.Windows.Forms.Label();
             this.panel_Texto.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,17 +48,19 @@
             this.panel_Links.AutoScroll = true;
             this.panel_Links.Location = new System.Drawing.Point(0, 102);
             this.panel_Links.Name = "panel_Links";
-            this.panel_Links.Size = new System.Drawing.Size(315, 448);
+            this.panel_Links.Size = new System.Drawing.Size(283, 448);
             this.panel_Links.TabIndex = 0;
             // 
             // label_Titulo
             // 
             this.label_Titulo.AutoSize = true;
-            this.label_Titulo.Location = new System.Drawing.Point(12, 49);
+            this.label_Titulo.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Titulo.ForeColor = System.Drawing.Color.Blue;
+            this.label_Titulo.Location = new System.Drawing.Point(239, 24);
             this.label_Titulo.Name = "label_Titulo";
-            this.label_Titulo.Size = new System.Drawing.Size(101, 13);
+            this.label_Titulo.Size = new System.Drawing.Size(147, 33);
             this.label_Titulo.TabIndex = 1;
-            this.label_Titulo.Text = "Do your search Bro!";
+            this.label_Titulo.Text = "Os Lusiadas";
             // 
             // textBox1
             // 
@@ -69,11 +71,12 @@
             // 
             // button_Search
             // 
+            this.button_Search.Enabled = false;
             this.button_Search.Location = new System.Drawing.Point(506, 73);
             this.button_Search.Name = "button_Search";
             this.button_Search.Size = new System.Drawing.Size(75, 23);
             this.button_Search.TabIndex = 3;
-            this.button_Search.Text = "Go Search";
+            this.button_Search.Text = "Pesquisar";
             this.button_Search.UseVisualStyleBackColor = true;
             this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
@@ -81,19 +84,31 @@
             // 
             this.panel_Texto.Controls.Add(this.label_rotuloDoc);
             this.panel_Texto.Controls.Add(this.label_TextoDoc);
-            this.panel_Texto.Location = new System.Drawing.Point(343, 102);
+            this.panel_Texto.Location = new System.Drawing.Point(310, 102);
             this.panel_Texto.Name = "panel_Texto";
-            this.panel_Texto.Size = new System.Drawing.Size(245, 232);
+            this.panel_Texto.Size = new System.Drawing.Size(302, 267);
             this.panel_Texto.TabIndex = 4;
+            // 
+            // label_rotuloDoc
+            // 
+            this.label_rotuloDoc.AutoSize = true;
+            this.label_rotuloDoc.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_rotuloDoc.ForeColor = System.Drawing.Color.Blue;
+            this.label_rotuloDoc.Location = new System.Drawing.Point(13, 11);
+            this.label_rotuloDoc.Name = "label_rotuloDoc";
+            this.label_rotuloDoc.Size = new System.Drawing.Size(63, 25);
+            this.label_rotuloDoc.TabIndex = 1;
+            this.label_rotuloDoc.Text = "Título";
             // 
             // label_TextoDoc
             // 
             this.label_TextoDoc.AutoSize = true;
-            this.label_TextoDoc.Location = new System.Drawing.Point(12, 42);
+            this.label_TextoDoc.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TextoDoc.Location = new System.Drawing.Point(4, 45);
             this.label_TextoDoc.Name = "label_TextoDoc";
-            this.label_TextoDoc.Size = new System.Drawing.Size(182, 13);
+            this.label_TextoDoc.Size = new System.Drawing.Size(206, 16);
             this.label_TextoDoc.TabIndex = 0;
-            this.label_TextoDoc.Text = "Conteudo do doc cujo link foi clicado";
+            this.label_TextoDoc.Text = "Conteudo do doc do link clicado";
             // 
             // progressBar1
             // 
@@ -130,21 +145,11 @@
             this.estatisticasToolStripMenuItem.Text = "Estatisticas";
             this.estatisticasToolStripMenuItem.Click += new System.EventHandler(this.estatisticasToolStripMenuItem_Click);
             // 
-            // label_rotuloDoc
-            // 
-            this.label_rotuloDoc.AutoSize = true;
-            this.label_rotuloDoc.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_rotuloDoc.ForeColor = System.Drawing.Color.Blue;
-            this.label_rotuloDoc.Location = new System.Drawing.Point(13, 11);
-            this.label_rotuloDoc.Name = "label_rotuloDoc";
-            this.label_rotuloDoc.Size = new System.Drawing.Size(53, 21);
-            this.label_rotuloDoc.TabIndex = 1;
-            this.label_rotuloDoc.Text = "Título";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(612, 550);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.panel_Texto);

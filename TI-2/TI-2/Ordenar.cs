@@ -10,10 +10,10 @@ namespace TI_2
         /// <summary>
         /// Método Quick Sort
         /// </summary>
-        /// <param name="X">Vetor</param>
+        /// <param name="X">Lista de termos</termos></param>
         /// <param name="p">0</param>
-        /// <param name="r">vetor.lenght-1</param>
-        public void Sort(ref Termo[] X, int p, int r)
+        /// <param name="r">Lista.Count-1</param>
+        public void Sort(ref List<Termo> X, int p, int r)
         {
             int q;
             if (p < r)
@@ -24,7 +24,7 @@ namespace TI_2
             }
         }
 
-        private static int Particao(Termo[] X, int p, int r)
+        private static int Particao(List<Termo> X, int p, int r)
         {
             Termo Pivo;
             int i, j;
@@ -49,7 +49,7 @@ namespace TI_2
             return j;
         }
 
-        private static void Troca(Termo[] X, int i, int j)
+        private static void Troca(List<Termo> X, int i, int j)
         {
             Termo Aux;
             Aux = X[i];

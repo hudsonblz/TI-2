@@ -8,14 +8,18 @@ namespace TI_2
     class Termo
     {
         /*"Matriz de frequencia" desse termo, quantas vezes ele aparece em cada documento
-         * os documentos vão de 1 a 6, então 7 posições (a zero fica inutilizada)*/
+         * os documentos vão de 1 a n, então n+1 posições (a zero fica inutilizada)*/
         public int[] frequenciaEmDoc = new int[info.numDocumentos + 1];
         public double frequenciaInversa = 0;    // frequencia inversa do termo (total de documento/documentos em que ele aparece)
         public string palavra;  // a string do termo propriamente dita
 
-        public Termo(string Palavra, int arquivo, int posicao)
+        /// <summary>
+        /// Cria um novo termo com suas propriedades
+        /// </summary>
+        /// <param name="Palavra">String que o termo representa</param>
+        /// <param name="arquivo">Número do documento onde ela aparece primeiro</param>
+        public Termo(string Palavra, int arquivo)
         {
-            /* Para criar um termo basta dizer a palavra e o arquivo onde ela foi inicialmente encontrada e em qual posicao do arquivo ela esta*/
             palavra = Palavra;
             frequenciaEmDoc[arquivo] = 1;           
         }
