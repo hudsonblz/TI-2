@@ -21,7 +21,8 @@ namespace TI_2
             label_numDoc.Text = info.numDocumentos.ToString();
             label_tatalPalavras.Text = info.totalPalavras.ToString();
             label_totalVocab.Text = info.palavrasVocab.ToString();
-            label_tempoLeitura.Text = info.tempoLerArquivos.ToString()+" s"; 
+            label_tempoLeitura.Text = info.tempoLerArquivos.Milliseconds.ToString()+" ms";
+            label_consulta.Text = info.tempoConsultar.Milliseconds.ToString() + " ms"; 
         }
 
         

@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System;
 
 namespace TI_2
 {
@@ -8,8 +9,10 @@ namespace TI_2
         static public int numDocumentos = 0;    
         static public int totalPalavras = 0;    
         static public int palavrasVocab = 0;
-        static public int tempoLerArquivos = 0;
-       
+        static public TimeSpan tempoLerArquivos = TimeSpan.FromMilliseconds(1);
+        static public TimeSpan tempoConsultar = TimeSpan.FromMilliseconds(1);
+        static public Dicionario Vocab = new Dicionario();
+               
         static public string[] rotulos = new string[1103];  //Usado para mostrar o nome dos documentos 
 
         /// <summary>
@@ -23,6 +26,7 @@ namespace TI_2
                 i++;
             }
             numDocumentos = i - 1;
+            Vocab.Docs = new Documento[i];
         }
 
         /// <summary>

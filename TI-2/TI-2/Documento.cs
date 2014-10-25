@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace TI_2
 {
@@ -16,8 +17,8 @@ namespace TI_2
         /// O documento é lido, ordenado e os termos são adicionados ao vocabulário.
         /// </summary>
         /// <param name="_numArquivo">Nome do arquivo txt, representado por um número</param>
-        /// <param name="Voc">referencia à lista 'vocabulario' à qual esse documento vai pertencer</param>
-        public Documento(int _numArquivo, ref List<Termo> Voc)
+        /// <param name="infoVocab">referencia à lista 'vocabulario' à qual esse documento vai pertencer</param>
+        public Documento(int _numArquivo)
         {
             /* No construtor basta dizer o nome (numero) do arquivo txt
              * O documento é lido, ordenado e adicionado ao vocabulário */
@@ -25,10 +26,10 @@ namespace TI_2
             Arquivo = numArquivo + ".txt";
             LerArquivo();   //Leitura, trasf. léxica, elimina palavras repetidas e ordena
 
-            if (Voc.Count > 0)
-                addVocabulario(ref Voc); //Adiciona a lista de termos no documento ao vocabulario geral eliminando duplicidades
+            if (info.Vocab.Vocabulario.Count > 0)
+                addVocabulario(); //Adiciona a lista de termos no documento ao vocabulario geral eliminando duplicidades
             else
-                Voc.AddRange(documento);    // Se o vocabulario estiver vazio simplesmente adiciona toda a lista de uma vez
+                info.Vocab.Vocabulario.AddRange(documento);    // Se o vocabulario estiver vazio simplesmente adiciona toda a lista de uma vez
         }
 
         /// <summary>
@@ -73,6 +74,26 @@ namespace TI_2
         {
             string texto = File.ReadAllText(Arquivo);   // Lê o documento inteiro e salva o conteudo no string texto
             return texto;
+        }
+
+        /// <summary>
+        /// Le a linha indicada do documento
+        /// </summary>
+        /// <param name="linha">Linha a ser lida (1 based)</param>
+        /// <returns>O conteudo daquela linha</returns>
+        public string lerUmaLinha(int linha)
+        {
+            string linhaDoDoc = "Linha não encontrada";
+            var leitor = new FileStream(Arquivo, FileMode.Open, FileAccess.Read);
+            var file = new StreamReader(leitor, true);
+            int i = 1;
+            while ((linhaDoDoc = file.ReadLine()) != null)
+            {
+                if (linha==i)
+                    return file.ReadLine();
+                i++;
+            }
+            return linhaDoDoc;
         }
 
         /// <summary>
@@ -157,26 +178,26 @@ namespace TI_2
         /// Adiciona os termos encontrados no documento na lista 'Vocabulario' geral
         /// </summary>
         /// <param name="Voc">Vocabulario Geral</param>
-        private void addVocabulario(ref List<Termo> Voc)
+        private void addVocabulario()
         {
             // Segue a mesma lógica do add termos no vocabulário
             bool existe = false;
             foreach (Termo termo in documento)
             {
-                for (int i = 0; i < Voc.Count; i++)
+                for (int i = 0; i < info.Vocab.Vocabulario.Count; i++)
                 {
-                    if (Voc[i].palavra == termo.palavra)
+                    if (info.Vocab.Vocabulario[i].palavra == termo.palavra)
                     {
                         /* Caso a palavra exista no vocabulario 
                          * a frequencia naquele documento é igualada à frequencia observada na leitura do documento */
-                        Voc[i].frequenciaEmDoc[numArquivo] = termo.frequenciaEmDoc[numArquivo];
+                        info.Vocab.Vocabulario[i].frequenciaEmDoc[numArquivo] = termo.frequenciaEmDoc[numArquivo];
                         existe = true;
                     }
                 }
 
                 if (!existe)
                 {
-                    Voc.Add(termo);
+                    info.Vocab.Vocabulario.Add(termo);
                     numPalavras++;
                 }
                 existe = false;
