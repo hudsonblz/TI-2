@@ -57,7 +57,7 @@
     <Compile Include="Estatisticas.Designer.cs">
       <DependentUpon>Estatisticas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hardworker.cs" />
+    <Compile Include="Leitura.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>

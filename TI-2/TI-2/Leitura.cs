@@ -6,7 +6,7 @@ using System.IO;
 
 namespace TI_2
 {
-    class Hardworker
+    class Leitura
     {
         
         public event EventHandler<HardWorkerEventArgs> ProgressChanged;

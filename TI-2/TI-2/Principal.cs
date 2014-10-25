@@ -27,7 +27,7 @@ namespace TI_2
             this.Hide();
             Thread thread = new Thread(new ThreadStart(this.Showsplash));
             thread.Start();
-            Hardworker worker = new Hardworker();
+            Leitura worker = new Leitura();
             worker.ProgressChanged += (o, ex) =>
             {
                 this.splashScr.UpdateProgress(ex.Progress);
@@ -53,10 +53,14 @@ namespace TI_2
 
         private void gerarLinks()
         {
+            progressBar1.Maximum = info.Vocab.Docs.Length;
+            progressBar1.Visible = true;
             for (int i = 1; i < info.Vocab.Docs.Length; i++)
-            {
+            {                
                NewLink(info.Vocab.Docs[i].numArquivo);
+               progressBar1.PerformStep();
             }
+            progressBar1.Visible = false;
         }
 
         private void button_Search_Click(object sender, EventArgs e)
@@ -79,6 +83,7 @@ namespace TI_2
         private void linkClicado(object caminhoLink, LinkLabelLinkClickedEventArgs e)
         {
             panel_Texto.Visible = true;
+            panel_Links.Visible = false;
             label_rotuloDoc.Text = info.rotulos[int.Parse(e.Link.LinkData.ToString())];
             label_TextoDoc.Text = getTextoDoc(int.Parse(e.Link.LinkData.ToString()));
         }
@@ -126,8 +131,10 @@ namespace TI_2
             Estatic.ShowDialog();
         }
 
-       
-
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel_Texto.Visible = false;
+            panel_Links.Visible = true;
+        }
     }
 }
