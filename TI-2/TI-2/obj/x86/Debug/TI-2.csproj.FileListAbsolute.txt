@@ -8,3 +8,5 @@ C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.pdb
 C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Estatisticas.resources
 C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Splash.resources
 C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Principal.resources
+C:\Users\Hudson\Desktop\TI editavel\TI-2\TI-2\obj\x86\Debug\TI-2.exe
+C:\Users\Hudson\Desktop\TI editavel\TI-2\TI-2\obj\x86\Debug\TI-2.pdb

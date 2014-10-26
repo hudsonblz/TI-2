@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arvore_huffman.cs" />
     <Compile Include="Dicionario.cs" />
     <Compile Include="Documento.cs" />
     <Compile Include="Estatisticas.cs">
@@ -58,6 +59,7 @@
       <DependentUpon>Estatisticas.cs</DependentUpon>
     </Compile>
     <Compile Include="Leitura.cs" />
+    <Compile Include="No.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
