@@ -55,11 +55,19 @@ namespace TI_2
         {
             progressBar1.Maximum = info.Vocab.Docs.Length;
             progressBar1.Visible = true;
-            for (int i = 1; i < info.Vocab.Docs.Length; i++)
-            {                
-               NewLink(info.Vocab.Docs[i].numArquivo);
-               progressBar1.PerformStep();
+
+            Consulta cons = new Consulta(textBox1.Text.ToString(), info.Vocab);
+            foreach (int i in cons.lista_de_links())
+            {
+                NewLink(info.Vocab.Docs[i - 1].numArquivo);
+                progressBar1.PerformStep();
             }
+
+            //for (int i = 1; i < info.Vocab.Docs.Length; i++)
+            //{                
+            //   NewLink(info.Vocab.Docs[i].numArquivo);
+            //   progressBar1.PerformStep();
+            //}
             progressBar1.Visible = false;
         }
 

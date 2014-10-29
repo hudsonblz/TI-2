@@ -11,6 +11,7 @@ namespace TI_2
         private string Arquivo;     // Nome do arquivo de texto de origem do documento
         private List<Termo> documento = new List<Termo>();      // Lista de termos do documento
         public int numArquivo;     // Representa a posição do arquivo a matriz de frequencia dos termos
+        public int total_palavras;
 
         /// <summary>
         /// Cria novo objeto do tipo Documento, equivalente lógico a um arquivo txt.
@@ -60,6 +61,7 @@ namespace TI_2
             string texto = File.ReadAllText(Arquivo);   // Lê o documento inteiro e salva o conteudo no string texto
             texto = transformacaoLexica(texto);
             string[] termos = texto.Split(' '); // Divide o texto num vetor de strings com base nos espaços
+            total_palavras = termos.Length;
             info.totalPalavras += termos.Length;
             // Esse vetor "termos" contem todas as palavras do arquivo (duplicadas)
             addTermosNoDocumento(termos);     // Rotina para adicionar os termos lidos na lista do documento

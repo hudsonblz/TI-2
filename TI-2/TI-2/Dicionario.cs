@@ -61,6 +61,8 @@ namespace TI_2
                 Docs[i].calculaPesos(Vocabulario);
             }
         }
+
+
     }
 }
 

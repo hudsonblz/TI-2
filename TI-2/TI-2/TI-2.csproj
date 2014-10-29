@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arvore_huffman.cs" />
+    <Compile Include="Consulta.cs" />
     <Compile Include="Dicionario.cs" />
     <Compile Include="Documento.cs" />
     <Compile Include="Estatisticas.cs">
@@ -60,6 +61,7 @@
     </Compile>
     <Compile Include="Leitura.cs" />
     <Compile Include="No.cs" />
+    <Compile Include="peso_docs.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>

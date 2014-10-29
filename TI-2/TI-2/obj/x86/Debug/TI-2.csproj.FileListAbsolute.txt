@@ -10,3 +10,13 @@ C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Splash.reso
 C:\Users\Thais\Google Drive\GitHub\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Principal.resources
 C:\Users\Hudson\Desktop\TI editavel\TI-2\TI-2\obj\x86\Debug\TI-2.exe
 C:\Users\Hudson\Desktop\TI editavel\TI-2\TI-2\obj\x86\Debug\TI-2.pdb
+C:\Users\Hudson\Desktop\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.exe
+C:\Users\Hudson\Desktop\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.pdb
+C:\Users\Hudson\Desktop\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.csprojResolveAssemblyReference.cache
+C:\Users\Hudson\Desktop\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Estatisticas.resources
+C:\Users\Hudson\Desktop\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Principal.resources
+C:\Users\Hudson\Desktop\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Properties.Resources.resources
+C:\Users\Hudson\Desktop\TI-2\TI-2\TI-2\obj\x86\Debug\TI_2.Splash.resources
+C:\Users\Hudson\Desktop\TI-2\TI-2\TI-2\obj\x86\Debug\TI-2.csproj.GenerateResource.Cache
+C:\Users\Hudson\Desktop\TI-2\TI-2\TI-2\bin\Debug\TI-2.exe
+C:\Users\Hudson\Desktop\TI-2\TI-2\TI-2\bin\Debug\TI-2.pdb
